@@ -1,11 +1,13 @@
 {
-  "name": "Markdown Editor",
+  "name": "markdown_editor",
   "version": "1.0.0",
   "description": "markdown viewer/editor made in node",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "ejs": "^2.5.7",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "redis": "^2.8.0",
+    "share": "0.6.3"
   }
 }

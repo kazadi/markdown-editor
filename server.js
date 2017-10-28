@@ -8,9 +8,21 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 //routes for app
-app.get('/', function (req, res) {
+app.get('/(:id)', function (req, res) {
     res.render('pad');
 });
+
+var sharejs = require('share');
+require('redis');
+
+var options = {
+    db: {
+        type: 'redis'
+    },
+};
+
+//attach express server to sharejs
+sharejs.server.attach(app, options);
 
 //listen to port 9900 
 var port = process.env.PORT || 9900;

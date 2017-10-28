@@ -2,15 +2,19 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>Markdown Editor</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="container-fluid">
+    <section class="row">
+        <textarea class="col-md-6 full-height pad" id="pad">Write your text here...</textarea>
+        <div class="col-md-6 full-height markdown" id="markdown"></div>
+    </section>
 
-    <body class="container-fluid">
-        Hello World!
-    </body>
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.0.2/dist/showdown.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

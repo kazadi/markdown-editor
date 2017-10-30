@@ -3,14 +3,42 @@
 
 <head>
     <title>Markdown Editor</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="container-fluid">
-    <section class="row">
-        <textarea class="col-md-6 full-height pad" id="pad">Write your text here...</textarea>
-        <div class="col-md-6 full-height markdown" id="markdown"></div>
+    <section class="row row-wrapper--custom">
+        <div class="col-md-4 full-height">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#">Markdown</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <textarea class="pad box" id="pad">Write your text here...</textarea>
+            </div>
+        </div>
+
+        <div class="col-md-4 full-height ">
+            <ul class="nav nav-tabs">
+                <li>
+                    <a data-toggle="tab" href="#markdown">HTML</a>
+                </li>
+                <li class="active">
+                    <a data-toggle="tab" href="#codespan">Code Output</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="markdown" class="markdown box tab-pane fade"></div>
+                <div class="box tab-pane fade in active" id="codespan">
+                    <code class="codespan" id="codespanArea" readonly></code>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="https://cdn.rawgit.com/showdownjs/showdown/1.0.2/dist/showdown.min.js"></script>

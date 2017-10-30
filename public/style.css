@@ -5,16 +5,89 @@ section,
     height: 100%;
 }
 
-.pad {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    border: none;
+body {
+    /* padding: 50px; */
+    background: #1e1e1e;
+}
+
+.row-wrapper--custom {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-height: 80%;
+}
+
+.box {
+    border: 5px solid rgba(204, 204, 204, 0.1);
+    background: #3c3c3c;
+    color: #cccccc;
     overflow: auto;
     outline: none;
     resize: none;
     box-shadow: none;
+    padding: 30px;
+    height: 100%;
+}
+
+.nav-tabs>li {
+    color: white;
+    margin-bottom: 0;
+}
+
+.nav-tabs,
+.nav-tabs>li>a {
+    color: #cccccc;
+    border: none;
+    border-bottom: none;
+}
+
+.nav-tabs>li>a:hover {
+    color: #1e1e1e;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus {
+    color: #ffffff;
+    background-color: #4b4b4b;
+    border: none;
+    box-shadow: none;
+}
+
+.nav-tabs>li.active>a:hover {
+    background-color: #a5a5a5;
+    color: #e6e6e6;
+    border: none;
+    box-shadow: none;
+}
+
+.tab-content {
+    height: 100%;
+}
+
+
+/*.box--dark{
+    border: 5px solid rgba(204, 204, 204, 0.1);
+    background: #3c3c3c;
+    color: #cccccc;
+}
+
+.box--light{
+
+}*/
+
+.pad {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    width: 100%;
 }
 
 .markdown {
     overflow: auto;
-    border-left: 1px solid black;
+}
+
+code {
+    padding: 0;
+    font-size: 90%;
+    color: #cccccc;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
 }

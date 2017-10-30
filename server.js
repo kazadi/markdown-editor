@@ -8,6 +8,9 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 //routes for app
+app.get('/', function (req, res) {
+    res.render('pad');
+});
 app.get('/(:id)', function (req, res) {
     res.render('pad');
 });

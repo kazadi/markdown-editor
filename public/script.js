@@ -2,6 +2,7 @@ window.onload = function () {
     var converter = new showdown.Converter();
     var pad = document.getElementById('pad');
     var markdownArea = document.getElementById('markdown');
+    var codespanArea = document.getElementById('codespanArea');
 
     pad.addEventListener('keydown', function (e) {
         if (e.keyCode === 9) {
@@ -31,6 +32,7 @@ window.onload = function () {
         var markdownText = pad.value;
         previousMarkdownValue = markdownText;
         html = converter.makeHtml(markdownText);
+        codespanArea.innerText = html;
         markdownArea.innerHTML = html;
     };
 
